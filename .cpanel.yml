@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/accounting/public_html/qa/
+    - export DEPLOYPATH=/home/accounting/public_html/pure/
     - /bin/cp * $DEPLOYPATH
