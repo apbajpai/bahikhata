@@ -1,33 +1,33 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'v4.1.6',
-    'version' => '4.1.6.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '64d264afe81f154d972a839d55491efcd6c665e7',
     'name' => 'codeigniter4/appstarter',
   ),
   'versions' => 
   array (
     'codeigniter4/appstarter' => 
     array (
-      'pretty_version' => 'v4.1.6',
-      'version' => '4.1.6.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '64d264afe81f154d972a839d55491efcd6c665e7',
     ),
     'codeigniter4/framework' => 
     array (
-      'pretty_version' => 'v4.1.6',
-      'version' => '4.1.6.0',
+      'pretty_version' => 'v4.1.7',
+      'version' => '4.1.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '557705a45a0358f162cc0fa620c22428149f70b8',
+      'reference' => 'c4edeb3680da7b0f829a5ad597c1c159fe01b902',
     ),
     'doctrine/instantiator' => 
     array (

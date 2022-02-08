@@ -45,7 +45,7 @@ class CodeIgniter
     /**
      * The current version of CodeIgniter Framework
      */
-    public const CI_VERSION = '4.1.6';
+    public const CI_VERSION = '4.1.7';
 
     private const MIN_PHP_VERSION = '7.3';
 
@@ -178,8 +178,10 @@ class CodeIgniter
         }
 
         // Set default locale on the server
-        locale_set_default($this->config->defaultLocale ?? 'en');
-
+        //locale_set_default($this->config->defaultLocale ?? 'en');
+        if( function_exists('locale_set_default' ) ) :
+            locale_set_default($this->config->defaultLocale ?? 'en');
+        endif; 
         // Set default timezone on the server
         date_default_timezone_set($this->config->appTimezone ?? 'UTC');
 
