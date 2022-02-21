@@ -17,8 +17,8 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Users');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('Index');
+$routes->setDefaultMethod('login');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -31,7 +31,22 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Users::index');
+
+$routes->post('/signup', 'Auth::signup');
+$routes->post('/login', 'Auth::login');
+
+$routes->group("/", ["filter" => "noauth"] , function($routes){
+    $routes->get('/signup', 'Auth::signup');
+    $routes->get('/login', 'Auth::login');
+    $routes->get('/', 'Index::index');
+});
+
+$routes->group("/", ["filter" => "myauth"] , function($routes){
+    $routes->get('/dashboard', 'Index::dashboard');
+    $routes->get('/accounts/general-purchase', 'Accounts::general_purchase');
+    $routes->post('/accounts/general-purchase', 'Accounts::general_purchase_add');
+});
+
 
 /*
  * --------------------------------------------------------------------

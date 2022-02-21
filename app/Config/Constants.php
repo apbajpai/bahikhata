@@ -76,7 +76,7 @@ defined('EXIT_UNKNOWN_METHOD') || define('EXIT_UNKNOWN_METHOD', 6); // unknown c
 defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user input
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
-defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-/*By Amulya*/
-$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://'.$_SERVER['HTTP_HOST'] : 'http://'.$_SERVER['HTTP_HOST'];
-defined('BASE') || define('BASE',$protocol);
+
+defined('THEME_NAME')      || define('THEME_NAME', 'bahikhata-v1'); // Theme which we are curently using
+defined('TIME__ZONE') || define('TIME__ZONE', +5.5);
+defined('BAD__TIME') || define('BAD__TIME', gmdate("Y/m/j H:i:s", time() + 3600*(TIME__ZONE+date("I")))); // CURRENT TIME IN INDIA

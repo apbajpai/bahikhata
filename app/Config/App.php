@@ -23,8 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = BASE.'/public/';
-  //  public $baseURL = 'https://pure.taxandaccounting.in/public/';
+    public $baseURL = 'http://localhost:8080/amulya-projects/bahikhata/';
 
     /**
      * --------------------------------------------------------------------------
